@@ -1,0 +1,42 @@
+{
+  "title": "BridgeFog",
+  "padOptions": {
+    "noColors": false,
+    "showControls": true,
+    "showChat": true,
+    "showLineNumbers": true,
+    "useMonospaceFont": false,
+    "userName": false,
+    "userColor": false,
+    "rtl": false,
+    "alwaysShowChat": true,
+    "chatAndUsers": true,
+    "lang": "en-gb"
+  },
+  "suppressErrorsInPadText": false,
+  "requireSession": false,
+  "editOnly": false,
+  "sessionNoPassword": false,
+  "minify": true,
+  "maxAge": 21600,
+  "abiword": null,
+  "allowUnknownFileEnds": true,
+  "requireAuthentication": false,
+  "requireAuthorization": false,
+  "trustProxy": false,
+  "disableIPlogging": false,
+  "socketTransportProtocols": [
+    "xhr-polling",
+    "jsonp-polling",
+    "htmlfile"
+  ],
+  "loadTest": false,
+  "loglevel": "INFO",
+  "logconfig": {
+    "appenders": [
+      {
+        "type": "console"
+      }
+    ]
+  }
+}
