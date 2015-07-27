@@ -17,9 +17,10 @@ settings = settings.merge(
     password: database_uri.password,
     database: database_uri.path.sub(%r{^/}, '')
   },
-  sessionKey: ENV.fetch('SESSION_KEY', SecureRandom.hex),
 )
-
 File.write(File.expand_path('../../settings.json', __FILE__), settings.to_json)
+
+sessionKey = ENV.fetch('SESSION_KEY', SecureRandom.hex)
+File.write(File.expand_path('../../SESSION_KEY.txt', __FILE__), sessionKey)
 
 exec(File.expand_path('../run.sh', __FILE__))
