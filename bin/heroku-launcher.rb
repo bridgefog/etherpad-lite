@@ -17,6 +17,7 @@ settings = settings.merge(
     password: database_uri.password,
     database: database_uri.path.sub(%r{^/}, '')
   },
+  port: ENV['PORT'],
 )
 
 if (adminPass = ENV['ADMIN_PASSWORD'])
