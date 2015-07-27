@@ -18,6 +18,12 @@ settings = settings.merge(
     database: database_uri.path.sub(%r{^/}, '')
   },
 )
+
+if (adminPass = ENV['ADMIN_PASSWORD'])
+  users = settings[:users] ||= {}
+  users['admin'] = { password: adminPass, is_admin: true }
+end
+
 File.write(File.expand_path('../../settings.json', __FILE__), settings.to_json)
 
 sessionKey = ENV.fetch('SESSION_KEY', SecureRandom.hex)
